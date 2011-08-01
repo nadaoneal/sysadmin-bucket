@@ -1,0 +1,7 @@
+Any random system administration scripts I think are worth sharing.
+
+** github.py **
+I'm using this to back up all the repos in my organization.
+... but why do you need to back up something that's on github? 
+... especially since all the developers will have their own local copies?
+Listen: having a backup is a magical talisman against ever needing a backup.
