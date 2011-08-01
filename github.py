@@ -50,7 +50,7 @@ def main():
     repoList = json.loads(results)
 
     #===============================================================================
-    #  for each repo, clone if new; otherwise git remote update 
+    #  for each repo, clone if new; otherwise git remote update; git pull --all
     #  authenticating via ~/.gitconfig and ssh certificate
     #===============================================================================
 
@@ -64,6 +64,7 @@ def main():
             if os.path.isdir(repoDir):
                 os.chdir(repoDir)
                 subprocess.call('git remote update',shell=True, stderr=subprocess.STDOUT) 
+                subprocess.call('git pull --all',shell=True, stderr=subprocess.STDOUT)
                 print "Updating %s" % (repoName)
                 continue
             else:
